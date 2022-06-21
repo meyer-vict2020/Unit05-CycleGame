@@ -1,4 +1,5 @@
-﻿using Unit05.Game.Casting;
+﻿using System;
+using Unit05.Game.Casting;
 using Unit05.Game.Directing;
 using Unit05.Game.Scripting;
 using Unit05.Game.Services;
@@ -20,8 +21,16 @@ namespace Unit05
             // create the cast
             Cast cast = new Cast();
             cast.AddActor("food", new Food());
+
             cast.AddActor("snake", new Snake());
+            cast.AddActor("snake", new Snake());
+
             cast.AddActor("score", new Score());
+
+            Random random = new Random();
+            int r = random.Next(0,255);
+            int g = random.Next(0,255);
+            int b = random.Next(0,255);
 
             // create the services
             KeyboardService keyboardService = new KeyboardService();

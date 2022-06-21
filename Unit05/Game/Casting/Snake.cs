@@ -100,8 +100,9 @@ namespace Unit05.Game.Casting
         /// </summary>
         private void PrepareBody()
         {
-            int x = Constants.MAX_X / 2;
-            int y = Constants.MAX_Y / 2;
+            Random random = new Random();
+            int x = Constants.MAX_X / (random.Next(1,400)/100);
+            int y = Constants.MAX_Y / (random.Next(1,400)/100);
 
             for (int i = 0; i < Constants.SNAKE_LENGTH; i++)
             {
