@@ -21,16 +21,17 @@ namespace Unit05
             // create the cast
             Cast cast = new Cast();
             cast.AddActor("food", new Food());
-
-            cast.AddActor("snake", new Snake());
-            cast.AddActor("snake", new Snake());
-
             cast.AddActor("score", new Score());
 
-            Random random = new Random();
-            int r = random.Next(0,255);
-            int g = random.Next(0,255);
-            int b = random.Next(0,255);
+            Snake snake1 = new Snake();
+            Snake snake2 = new Snake();
+            cast.AddActor("snake", snake1);
+            cast.AddActor("snake", snake2);
+
+            // Random random = new Random();
+            // int r = random.Next(0,255);
+            // int g = random.Next(0,255);
+            // int b = random.Next(0,255);
 
             // create the services
             KeyboardService keyboardService = new KeyboardService();
