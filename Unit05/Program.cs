@@ -3,6 +3,7 @@ using Unit05.Game.Casting;
 using Unit05.Game.Directing;
 using Unit05.Game.Scripting;
 using Unit05.Game.Services;
+using Unit05.Game;
 
 
 namespace Unit05
@@ -21,12 +22,25 @@ namespace Unit05
             // create the cast
             Cast cast = new Cast();
             cast.AddActor("food", new Food());
-            cast.AddActor("score", new Score());
+
+            Score score1 = new Score();
+            Score score2 = new Score();
+            cast.AddActor("score", score1);
+            cast.AddActor("score", score2);
 
             Snake snake1 = new Snake();
             Snake snake2 = new Snake();
             cast.AddActor("snake", snake1);
             cast.AddActor("snake", snake2);
+
+            snake1.SetColor(Constants.RED);
+            Point position1 = new Point(Constants.MAX_X/4, Constants.MAX_Y/2);
+            snake1.SetPosition(position1);
+
+            snake2.SetColor(Constants.GREEN);
+            Point position2 = new Point(Constants.MAX_X/2, Constants.MAX_Y/2);
+            snake2.SetPosition(position2);
+
 
             // Random random = new Random();
             // int r = random.Next(0,255);
