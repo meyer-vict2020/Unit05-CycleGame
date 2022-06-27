@@ -23,29 +23,29 @@ namespace Unit05
             Cast cast = new Cast();
             cast.AddActor("food", new Food());
 
+            //add the scores to the cast
             Score score1 = new Score();
             Score score2 = new Score();
             cast.AddActor("score", score1);
             cast.AddActor("score", score2);
 
+            //create two snakes
             Snake snake1 = new Snake();
             Snake snake2 = new Snake();
             cast.AddActor("snake", snake1);
             cast.AddActor("snake", snake2);
 
+            //set the snakes' colors, points, and velocity
+            Point velocity = new Point(0,-1);
             snake1.SetColor(Constants.RED);
             Point position1 = new Point(Constants.MAX_X/4, Constants.MAX_Y/2);
             snake1.SetPosition(position1);
+            snake1.SetVelocity(velocity);
 
             snake2.SetColor(Constants.GREEN);
             Point position2 = new Point(Constants.MAX_X/2, Constants.MAX_Y/2);
             snake2.SetPosition(position2);
-
-
-            // Random random = new Random();
-            // int r = random.Next(0,255);
-            // int g = random.Next(0,255);
-            // int b = random.Next(0,255);
+            snake2.SetVelocity(velocity);
 
             // create the services
             KeyboardService keyboardService = new KeyboardService();

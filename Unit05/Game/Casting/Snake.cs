@@ -104,18 +104,22 @@ namespace Unit05.Game.Casting
             int x = Constants.MAX_X / 2;
             int y = Constants.MAX_Y / 2;
 
+            int r = random.Next(0,255);
+            int g = random.Next(0,255);
+            int b = random.Next(0,255);
+
             for (int i = 0; i < Constants.SNAKE_LENGTH; i++)
             {
-                Point position = new Point(x - i * Constants.CELL_SIZE, y);
-                Point velocity = new Point(1 * Constants.CELL_SIZE, 0);
+                Point position = new Point(x , y - i * Constants.CELL_SIZE);
+                Point velocity = new Point(0, 1 * Constants.CELL_SIZE);
                 string text = i == 0 ? "8" : "o";
-                //Color color = i == 0 ? Constants.YELLOW : Constants.GREEN;
+                Color color = new Color(r, g, b);
 
                 Actor segment = new Actor();
                 segment.SetPosition(position);
                 segment.SetVelocity(velocity);
                 segment.SetText(text);
-                segment.SetColor(Constants.GREEN);
+                segment.SetColor(color);
                 segments.Add(segment);
             }
         }
