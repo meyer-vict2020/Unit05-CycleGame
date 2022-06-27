@@ -30,21 +30,14 @@ namespace Unit05
             cast.AddActor("score", score2);
 
             //create two snakes
-            Snake snake1 = new Snake();
-            Snake snake2 = new Snake();
+            Snake snake1 = new Snake(Constants.MAX_X/4, Constants.MAX_Y/2);
+            Snake snake2 = new Snake(Constants.MAX_X/2, Constants.MAX_Y/2);
             cast.AddActor("snake", snake1);
             cast.AddActor("snake", snake2);
 
-            //set the snakes' colors, points, and velocity
+            //set the snakes' velocity
             Point velocity = new Point(0,-1);
-            snake1.SetColor(Constants.RED);
-            Point position1 = new Point(Constants.MAX_X/4, Constants.MAX_Y/2);
-            snake1.SetPosition(position1);
             snake1.SetVelocity(velocity);
-
-            snake2.SetColor(Constants.GREEN);
-            Point position2 = new Point(Constants.MAX_X/2, Constants.MAX_Y/2);
-            snake2.SetPosition(position2);
             snake2.SetVelocity(velocity);
 
             // create the services

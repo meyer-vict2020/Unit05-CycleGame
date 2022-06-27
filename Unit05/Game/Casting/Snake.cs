@@ -15,9 +15,9 @@ namespace Unit05.Game.Casting
         /// <summary>
         /// Constructs a new instance of a Snake.
         /// </summary>
-        public Snake()
+        public Snake(int x, int y)
         {
-            PrepareBody();
+            PrepareBody(x,y);
         }
 
         /// <summary>
@@ -98,11 +98,9 @@ namespace Unit05.Game.Casting
         /// <summary>
         /// Prepares the snake body for moving.
         /// </summary>
-        private void PrepareBody()
+        private void PrepareBody(int x, int y)
         {
             Random random = new Random();
-            int x = Constants.MAX_X / 2;
-            int y = Constants.MAX_Y / 2;
 
             int r = random.Next(0,255);
             int g = random.Next(0,255);
