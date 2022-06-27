@@ -64,7 +64,7 @@ namespace Unit05.Game.Casting
                 segment.SetPosition(position);
                 segment.SetVelocity(velocity);
                 segment.SetText("o");
-                segment.SetColor(Constants.GREEN);
+                segment.SetColor(tail.GetColor());
                 segments.Add(segment);
             }
         }
