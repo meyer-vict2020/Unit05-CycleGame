@@ -29,9 +29,9 @@ namespace Unit05
             cast.AddActor("score", score1);
             cast.AddActor("score", score2);
 
-            //create two snakes at different positions
-            Snake snake1 = new Snake(Constants.MAX_X/4, Constants.MAX_Y/2);
-            Snake snake2 = new Snake(Constants.MAX_X/2, Constants.MAX_Y/2);
+            //create two snakes at different positions and colors
+            Snake snake1 = new Snake(Constants.MAX_X/4, Constants.MAX_Y/2, Constants.RED);
+            Snake snake2 = new Snake(650, Constants.MAX_Y/2, Constants.GREEN);
             cast.AddActor("snake", snake1);
             cast.AddActor("snake", snake2);
 

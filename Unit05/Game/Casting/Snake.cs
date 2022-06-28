@@ -15,9 +15,9 @@ namespace Unit05.Game.Casting
         /// <summary>
         /// Constructs a new instance of a Snake.
         /// </summary>
-        public Snake(int x, int y)
+        public Snake(int x, int y, Color color)
         {
-            PrepareBody(x,y);
+            PrepareBody(x,y,color);
         }
 
         /// <summary>
@@ -98,20 +98,15 @@ namespace Unit05.Game.Casting
         /// <summary>
         /// Prepares the snake body for moving.
         /// </summary>
-        private void PrepareBody(int x, int y)
+        private void PrepareBody(int x, int y, Color color)
         {
             Random random = new Random();
-
-            int r = random.Next(0,255);
-            int g = random.Next(0,255);
-            int b = random.Next(0,255);
 
             for (int i = 0; i < Constants.SNAKE_LENGTH; i++)
             {
                 Point position = new Point(x , y - i * Constants.CELL_SIZE);
                 Point velocity = new Point(0, 1 * Constants.CELL_SIZE);
                 string text = i == 0 ? "8" : "o";
-                Color color = new Color(r, g, b);
 
                 Actor segment = new Actor();
                 segment.SetPosition(position);
