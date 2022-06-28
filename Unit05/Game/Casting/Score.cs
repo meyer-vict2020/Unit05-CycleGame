@@ -16,19 +16,19 @@ namespace Unit05.Game.Casting
         /// <summary>
         /// Constructs a new instance of an Food.
         /// </summary>
-        public Score()
+        public Score(string player)
         {
-            AddPoints(0);
+            AddPoints(0, player);
         }
 
         /// <summary>
         /// Adds the given points to the score.
         /// </summary>
         /// <param name="points">The points to add.</param>
-        public void AddPoints(int points)
+        public void AddPoints(int points, string player)
         {
             this.points += points;
-            SetText($"Score: {this.points}");
+            SetText($"Score {player}: {this.points}");
         }
     }
 }

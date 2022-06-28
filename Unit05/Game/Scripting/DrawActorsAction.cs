@@ -29,7 +29,7 @@ namespace Unit05.Game.Scripting
             Actor score1 = cast.GetFirstActor("score");
             Actor score2 = cast.GetSecondActor("score");
 
-            Point position2 = new Point(825, 0);
+            Point position2 = new Point(790, 0);
             score2.SetPosition(position2);
 
             List<Actor> segments1 = snake1.GetSegments();

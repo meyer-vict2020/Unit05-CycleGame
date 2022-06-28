@@ -42,6 +42,8 @@ namespace Unit05.Game.Scripting
         /// <param name="cast">The cast of actors.</param>
         private void HandleFoodCollisions(Cast cast)
         {
+            string player1 = "One";
+            string player2 = "Two";
             Snake snake1 = (Snake)cast.GetFirstActor("snake");
             Snake snake2 = (Snake)cast.GetSecondActor("snake");
 
@@ -54,14 +56,14 @@ namespace Unit05.Game.Scripting
             {
                 int points = food.GetPoints();
                 snake1.GrowTail(points);
-                score1.AddPoints(points);
+                score1.AddPoints(points, player1);
                 food.Reset();
             }
             else if (snake2.GetHead().GetPosition().Equals(food.GetPosition()))
             {
                 int points = food.GetPoints();
                 snake2.GrowTail(points);
-                score2.AddPoints(points);
+                score2.AddPoints(points, player2);
                 food.Reset();
             }
         }

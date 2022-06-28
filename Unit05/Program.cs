@@ -24,8 +24,10 @@ namespace Unit05
             cast.AddActor("food", new Food());
 
             //add the scores to the cast
-            Score score1 = new Score();
-            Score score2 = new Score();
+            string player1 = "One";
+            string player2 = "Two";
+            Score score1 = new Score(player1);
+            Score score2 = new Score(player2);
             cast.AddActor("score", score1);
             cast.AddActor("score", score2);
 
